@@ -37,7 +37,7 @@ class MsaiS : Mod(){
             var sc:Socket = Socket("localhost", 12345)
         } catch (e: Exception) {
             Log.warn(e.toString())
-            return
+            var sc = null
         }
         if (sc != null) {
             Log.warn("connect success")
