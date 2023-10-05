@@ -32,5 +32,9 @@ class MsaiS : Mod(){
 
     override fun loadContent(){
         Log.info("Msai-Service loading success")
+        val server:ServerSocket = ServerSocket(12345)
+        while (true){
+            sc = server.accept();
+        }
     }
 }
