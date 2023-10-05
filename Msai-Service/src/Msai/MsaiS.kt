@@ -36,7 +36,7 @@ class MsaiS : Mod(){
         try {
             val sc:Socket = Socket("localhost", 12345)
         } catch (e: Exception) {
-            Log.warn(e)
+            Log.warn(e.toString())
         }
         if (sc != null) {
             Log.warn("connect success")
