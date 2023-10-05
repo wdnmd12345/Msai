@@ -19,6 +19,7 @@ jobs:
     - name: Build mod jar
       run: cd Msai-Service && ./gradlew deploy && ls build/libs/
     - name: Upload built jar file
+      run: pwd && ls
       uses: actions/upload-artifact@v2
       with:
         name: ${{ github.event.repository.name }}
