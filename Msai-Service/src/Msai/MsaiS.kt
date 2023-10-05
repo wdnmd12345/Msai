@@ -31,21 +31,26 @@ class MsaiS : Mod(){
     }
 
     override fun loadContent(){
-        lateinit var sc:Socket
+        var sc:Socket?
         Log.info("Msai-Service loading success")
         try {
             sc = Socket("localhost", 12345)
         } catch (e: Exception) {
             Log.warn("unknown error")
+            sc = null
         }
         if (sc != null) {
             Log.info("connect success")
-            BaseDialog("Msai-Service").apply{
-                cont.apply{
-                    add("Msai-Service通信正常，您的操作将由ai接管").row()
-                    button("确定"){ hide() }.size(100f, 50f)
+            Time.runTask(10f){
+                BaseDialog("frog").apply{
+                    cont.apply{
+                        add("behold").row()
+                        //mod sprites are prefixed with the mod name (this mod is called 'example-kotlin-mod' in its config)
+                        image(Core.atlas.find("example-kotlin-mod-frog")).pad(20f).row()
+                        button("I see"){ hide() }.size(100f, 50f)
+                    }
+                    show()
                 }
-            show()
             }
         } else {
             Log.warn("connect fail")
