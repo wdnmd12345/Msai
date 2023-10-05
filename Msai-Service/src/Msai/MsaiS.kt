@@ -32,9 +32,19 @@ class MsaiS : Mod(){
 
     override fun loadContent(){
         Log.info("Msai-Service loading success")
-        val sc:Socket = Socket("localhost", 12345)
+        try {
+            val sc:Socket = Socket("localhost", 12345)
+        } catch (e: Exception) {
+            Log.warn(e)
+        }
         if (sc != null) {
             Log.warn("connect success")
+            BaseDialog("Msai-Service").apply{
+                cont.apply{
+                    add("Msai-Service通信正常，您的操作将由ai接管").row()
+                    button("确定"){ hide() }.size(100f, 50f)
+            show()
+            }
         } else {
             Log.info("connect fail")
         }
