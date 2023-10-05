@@ -17,9 +17,9 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
     - name: Build mod jar
-      run: cd Msai-Service && ./gradlew deploy && pwd && ls
+      run: cd Msai-Service && ./gradlew deploy
     - name: Upload built jar file
       uses: actions/upload-artifact@v2
       with:
         name: ${{ github.event.repository.name }}
-        path: Msai/Msai-Service/build/libs/${{ github.event.repository.name }}.jar
+        path: pwd && msai-service/build/libs/${{ github.event.repository.name }}.jar
