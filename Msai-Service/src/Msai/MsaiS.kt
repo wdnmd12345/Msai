@@ -43,6 +43,7 @@ class MsaiS : Mod(){
                 cont.apply{
                     add("Msai-Service通信正常，您的操作将由ai接管").row()
                     button("确定"){ hide() }.size(100f, 50f)
+                }
             show()
             }
         } else {
