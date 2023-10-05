@@ -6,7 +6,7 @@ import mindustry.game.EventType.*
 import mindustry.mod.*
 import mindustry.ui.dialogs.*
 
-import java.net.ServerSocket
+import java.net.Socket
 
 class MsaiS : Mod(){
 
@@ -32,12 +32,11 @@ class MsaiS : Mod(){
 
     override fun loadContent(){
         Log.info("Msai-Service loading success")
-        val server:ServerSocket = ServerSocket(12345)
-        while (true){
-            sc = server.accept()
-            val thread:ConnectThread = ConnectThread(sc)
-            thread.start()
+        val sc:Socket = Socket("localhost", 12345)
+        if (sc != null) {
+            Log.warn("connect success")
+        } else {
+            Log.info("connect fail")
         }
-        Log.info("客户端已连接到服务器")
     }
 }
