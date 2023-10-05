@@ -10,7 +10,7 @@ import java.net.Socket
 import java.lang.Exception
 
 class MsaiS : Mod(){
-
+    private val sc
     init{
         Log.info("Msai-Service Loading...")
 
