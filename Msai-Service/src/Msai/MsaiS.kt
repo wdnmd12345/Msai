@@ -36,10 +36,10 @@ class MsaiS : Mod(){
         try {
             sc = Socket("localhost", 12345)
         } catch (e: Exception) {
-            Log.warn(e.toString())
+            break
         }
         if (sc != null) {
-            Log.warn("connect success")
+            Log.info("connect success")
             BaseDialog("Msai-Service").apply{
                 cont.apply{
                     add("Msai-Service通信正常，您的操作将由ai接管").row()
@@ -48,7 +48,7 @@ class MsaiS : Mod(){
             show()
             }
         } else {
-            Log.info("connect fail")
+            Log.warn("connect fail")
         }
     }
 }
