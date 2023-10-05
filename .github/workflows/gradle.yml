@@ -17,7 +17,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
     - name: Enter
-      run: cd Msai-Service
+      run: cd Msai-Service && ls
     - name: Build mod jar
       run: ./gradlew deploy
     - name: Upload built jar file
