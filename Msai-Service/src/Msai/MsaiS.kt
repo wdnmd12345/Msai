@@ -31,7 +31,7 @@ class MsaiS : Mod(){
     }
 
     override fun loadContent(){
-        lateinit var sc:Socket?
+        lateinit var sc:Socket
         Log.info("Msai-Service loading success")
         try {
             sc = Socket("localhost", 12345)
