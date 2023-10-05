@@ -31,9 +31,10 @@ class MsaiS : Mod(){
     }
 
     override fun loadContent(){
+        lateinit val sc
         Log.info("Msai-Service loading success")
         try {
-            lateinit val sc:Socket = Socket("localhost", 12345)
+            val sc:Socket = Socket("localhost", 12345)
         } catch (e: Exception) {
             Log.warn(e.toString())
         }
