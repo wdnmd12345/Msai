@@ -7,6 +7,7 @@ import mindustry.mod.*
 import mindustry.ui.dialogs.*
 
 import java.net.Socket
+import java.lang.Exception
 
 class MsaiS : Mod(){
 
