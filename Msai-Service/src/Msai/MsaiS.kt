@@ -6,7 +6,7 @@ import mindustry.game.EventType.*
 import mindustry.mod.*
 import mindustry.ui.dialogs.*
 
-import java.net.Socket
+import java.net.ServerSocket
 
 class MsaiS : Mod(){
 
@@ -36,5 +36,6 @@ class MsaiS : Mod(){
         while (true){
             sc = server.accept();
         }
+        Log.info("客户端:"+sc.getInetAddress().getLocalHost()+"已连接到服务器")
     }
 }
