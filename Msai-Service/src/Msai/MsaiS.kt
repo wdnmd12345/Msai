@@ -6,6 +6,8 @@ import mindustry.game.EventType.*
 import mindustry.mod.*
 import mindustry.ui.dialogs.*
 
+import java.net.Socket
+
 class MsaiS : Mod(){
 
     init{
@@ -29,6 +31,6 @@ class MsaiS : Mod(){
     }
 
     override fun loadContent(){
-        Log.info("Loading some example content.")
+        Log.info("Msai-Service loading success")
     }
 }
