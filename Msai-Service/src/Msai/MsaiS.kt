@@ -34,7 +34,9 @@ class MsaiS : Mod(){
         Log.info("Msai-Service loading success")
         val server:ServerSocket = ServerSocket(12345)
         while (true){
-            val sc = server.accept()
+            sc = server.accept()
+            val thread:ConnectThread = ConnectThread(sc)
+            thread.start()
         }
         Log.info("客户端已连接到服务器")
     }
