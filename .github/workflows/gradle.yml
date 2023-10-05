@@ -15,7 +15,7 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 16
-    -name: Enter
+    - name: Enter
       run: cd Msai-Service
     - name: Build mod jar
       run: ./gradlew deploy
