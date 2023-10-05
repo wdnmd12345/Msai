@@ -1,0 +1,21 @@
+#the mod name as displayed in-game
+displayName: "Msai-Service"
+
+#the internal name of your mod
+name: "MsaiS"
+
+#your name
+author: "MuXi"
+
+#the fully qualified main class of the mod
+main: "Msai.MsaiS"
+
+#the mod description as seen in the mod dialog
+description: "Msai-Service"
+
+#the mod version
+version: 1.0
+
+#the minimum game build required to run this mod
+minGameVersion: 146
+hidden: false
