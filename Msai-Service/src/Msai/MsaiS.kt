@@ -34,10 +34,10 @@ class MsaiS : Mod(){
         lateinit var sc:Socket
         Log.info("Msai-Service loading success")
         try {
-            var sc:Socket = Socket("localhost", 12345)
+            sc = Socket("localhost", 12345)
         } catch (e: Exception) {
             Log.warn(e.toString())
-            var sc = null
+            sc = null
         }
         if (sc != null) {
             Log.warn("connect success")
