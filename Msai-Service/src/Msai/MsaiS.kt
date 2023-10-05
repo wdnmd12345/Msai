@@ -10,7 +10,6 @@ import java.net.Socket
 import java.lang.Exception
 
 class MsaiS : Mod(){
-    private val sc
     init{
         Log.info("Msai-Service Loading...")
 
@@ -34,7 +33,7 @@ class MsaiS : Mod(){
     override fun loadContent(){
         Log.info("Msai-Service loading success")
         try {
-            val sc:Socket = Socket("localhost", 12345)
+            lateinit val sc:Socket = Socket("localhost", 12345)
         } catch (e: Exception) {
             Log.warn(e.toString())
         }
