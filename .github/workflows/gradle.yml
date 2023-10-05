@@ -16,10 +16,8 @@ jobs:
         java-version: 16
     - name: Checkout
       uses: actions/checkout@master
-    - name: Enter
-      run: cd Msai-Service && ls
     - name: Build mod jar
-      run: ./gradlew deploy
+      run: cd Msai-Service && ./gradlew deploy
     - name: Upload built jar file
       uses: actions/upload-artifact@v2
       with:
