@@ -36,22 +36,12 @@ class MsaiS : Mod(){
         try {
             sc = Socket("localhost", 12345)
         } catch (e: Exception) {
-            Log.warn("unknown error")
+            Log.warn(e.toString())
             sc = null
         }
         if (sc != null) {
             Log.info("connect success")
-            Time.runTask(10f){
-                BaseDialog("frog").apply{
-                    cont.apply{
-                        add("behold").row()
-                        //mod sprites are prefixed with the mod name (this mod is called 'example-kotlin-mod' in its config)
-                        image(Core.atlas.find("example-kotlin-mod-frog")).pad(20f).row()
-                        button("I see"){ hide() }.size(100f, 50f)
-                    }
-                    show()
-                }
-            }
+            Log.info("客户端:"+sc.getInetAddress().getLocalHost()+"已连接到服务器")
         } else {
             Log.warn("connect fail")
         }
