@@ -36,6 +36,6 @@ class MsaiS : Mod(){
         while (true){
             val sc = server.accept()
         }
-        Log.info("客户端:"+sc.getInetAddress().getLocalHost()+"已连接到服务器")
+        Log.info("客户端已连接到服务器")
     }
 }
