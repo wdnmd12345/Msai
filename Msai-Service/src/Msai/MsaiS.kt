@@ -36,7 +36,7 @@ class MsaiS : Mod(){
         try {
             sc = Socket("localhost", 12345)
         } catch (e: Exception) {
-            break
+            Log.warn("unknown error")
         }
         if (sc != null) {
             Log.info("connect success")
