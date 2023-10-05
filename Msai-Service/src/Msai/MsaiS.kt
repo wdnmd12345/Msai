@@ -34,7 +34,7 @@ class MsaiS : Mod(){
         Log.info("Msai-Service loading success")
         val server:ServerSocket = ServerSocket(12345)
         while (true){
-            sc = server.accept();
+            val sc = server.accept();
         }
         Log.info("客户端:"+sc.getInetAddress().getLocalHost()+"已连接到服务器")
     }
