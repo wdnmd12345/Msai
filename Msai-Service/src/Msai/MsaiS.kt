@@ -41,7 +41,6 @@ class MsaiS : Mod(){
         }
         if (sc != null) {
             Log.info("connect success")
-            Log.info("客户端:"+sc.getInetAddress().getLocalHost()+"已连接到服务器")
         } else {
             Log.warn("connect fail")
         }
